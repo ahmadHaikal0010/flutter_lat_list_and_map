@@ -111,22 +111,22 @@ class _PageMapState extends State<PageMap> {
 
   Set<Marker> _createMarker() {
     Set<Marker> markers = {};
-    for (var hotel in _listHospital) {
-      final LatLng koordinat = LatLng(hotel['lattitude'], hotel['longitude']);
+    for (var hospital in _listHospital) {
+      final LatLng koordinat = LatLng(hospital['lattitude'], hospital['longitude']);
       markers.add(
         Marker(
-          markerId: MarkerId(hotel['namaTempat']),
+          markerId: MarkerId(hospital['namaTempat']),
           position: koordinat,
           onTap: () {
             _customInfoWindowController.addInfoWindow!(
               CustomBoxMap(
-                gambar: hotel['gambar'],
-                namaTempat: hotel['namaTempat'],
-                rating: hotel['rating'],
+                gambar: hospital['gambar'],
+                namaTempat: hospital['namaTempat'],
+                rating: hospital['rating'],
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (_) => DetailHospital(hotelData: hotel,)),
+                    MaterialPageRoute(builder: (_) => DetailHospital(hotelData: hospital,)),
                   );
                 },
               ),
