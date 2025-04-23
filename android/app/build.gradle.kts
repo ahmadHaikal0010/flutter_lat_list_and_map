@@ -8,7 +8,7 @@ plugins {
 android {
     namespace = "com.example.flutter_lat_list_and_map_mi2a"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    ndkVersion = "27.0.12077973"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
